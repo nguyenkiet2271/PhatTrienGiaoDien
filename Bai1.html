@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="MassMark" ><br>
+    <input type="number" id="HeightMark"><br>
+    <input type="number" id="MassJohn"><br>
+    <input type="number" id="HeightJohn"><br>
+    <button id="btnCal">Cal</button>
+
+    <p id="result"></p>
+
+    <script>
+        var MassMark = document.getElementById("MassMark")
+        var HeightMark = document.getElementById("HeightMark")
+        var MassJohn = document.getElementById("MassJohn")
+        var HeightJohn = document.getElementById("HeightJohn")
+        var resultText = document.getElementById("result")
+        var btnCal = document.getElementById("btnCal")
+
+        btnCal.onclick = function(){
+
+        var bmiMark = MassMark.value/(HeightMark.value*HeightMark.value)
+        var bmiJohn = MassJohn.value/(HeightJohn.value*HeightJohn.value)
+
+        var markHigherBMI= bmiMark>bmiJohn
+
+
+        resultText.innerHTML = "BMI Mark: " + bmiMark.toFixed(2) + "<br>" +"BMI John: " 
+        + bmiJohn.toFixed(2) + "<br>" +"Mark co BMI cao hon  " + markHigherBMI;}
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
