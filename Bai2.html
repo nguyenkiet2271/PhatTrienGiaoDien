@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="MassMark" ><br>
+    <input type="number" id="HeightMark"><br>
+    <input type="number" id="MassJohn"><br>
+    <input type="number" id="HeightJohn"><br>
+    <button id="btnCal">Cal</button>
+
+    <p id="result"></p>
+
+    <script>
+        var MassMark = document.getElementById("MassMark")
+        var HeightMark = document.getElementById("HeightMark")
+        var MassJohn = document.getElementById("MassJohn")
+        var HeightJohn = document.getElementById("HeightJohn")
+        var resultText = document.getElementById("result")
+        var btnCal = document.getElementById("btnCal")
+
+        btnCal.onclick = function(){
+
+        var bmiMark = MassMark.value/(HeightMark.value*HeightMark.value)
+        var bmiJohn = MassJohn.value/(HeightJohn.value*HeightJohn.value)
+
+        if (bmiMark > bmiJohn) {
+    console.log(`Mark's BMI (${bmiMark.toFixed(1)}) is higher than John's (${bmiJohn.toFixed(1)})!`);
+} else {
+    console.log(`John's BMI (${bmiJohn.toFixed(1)}) is higher than Mark's (${bmiMark.toFixed(1)})!`);
+
+} 
+
+}   
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
