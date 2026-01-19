@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcAverage(score1, score2, score3) {
+            return (score1 + score2 + score3) / 3;
+        }
+
+        function checkWinner(avgDolphins, avgKoalas) {
+            const minScore = 100;
+            if (avgDolphins >= minScore && avgDolphins > avgKoalas) {
+                console.log("Dolphins thang (score: " + avgDolphins.toFixed(2) + ")");
+            } else if (avgKoalas >= minScore && avgKoalas > avgDolphins) {
+                console.log("Koalas thang (score: " + avgKoalas.toFixed(2) + ")");
+            } else if (avgDolphins === avgKoalas && avgDolphins >= minScore && avgKoalas >= minScore) {
+                console.log("hoa!");
+            } else {
+                console.log("Khong co doi nao thang ca");
+            }
+        }
+
+        var scoreDolphins = [96, 108, 89];
+        var scoreKoalas = [88, 91, 110];
+
+        var avgDolphins = calcAverage(scoreDolphins[0], scoreDolphins[1], scoreDolphins[2]);
+        var avgKoalas = calcAverage(scoreKoalas[0], scoreKoalas[1], scoreKoalas[2]);
+
+        console.log(`Dolphins avg: ${avgDolphins}`);
+        console.log(`Koalas avg: ${avgKoalas}`);
+
+        if (avgDolphins > avgKoalas) {
+            console.log("Dolphins thang ");
+        } else if (avgKoalas > avgDolphins) {
+            console.log("Koalas thang ");
+        } else {
+            console.log("hoa!");
+        }
+
+        console.log("Voi tieu chi toi thieu 100 diem ");
+        checkWinner(avgDolphins, avgKoalas);
+    </script>
+    
+</body>
+</html>

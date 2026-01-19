@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcAverage(score1, score2, score3) {
+            return (score1 + score2 + score3) / 3;
+        }
+
+        var Dolphins1 = [44, 23, 71];
+        var Koalas1 = [65, 54, 49];
+
+        var avgDolphins1 = calcAverage(Dolphins1[0], Dolphins1[1], Dolphins1[2]);
+        var avgKoalas1 = calcAverage(Koalas1[0], Koalas1[1], Koalas1[2]);
+
+        var Dolphins2 = [85, 54, 41];
+        var Koalas2 = [23, 34, 27];
+
+        var avgDolphins2 = calcAverage(Dolphins2[0], Dolphins2[1], Dolphins2[2]);
+        var avgKoalas2 = calcAverage(Koalas2[0], Koalas2[1], Koalas2[2]);
+
+        function kiemTraThang(avgDolphins, avgKoalas) {
+            if (avgDolphins >= 2 * avgKoalas) {
+                console.log(`Dolphins thang (${avgDolphins.toFixed(0)} vs. ${avgKoalas.toFixed(0)})`);
+            } else if (avgKoalas >= 2 * avgDolphins) {
+                console.log(`Koalas thang (${avgKoalas.toFixed(0)} vs. ${avgDolphins.toFixed(0)})`);
+            } else {
+                console.log("Khong co doi nao thang ca");
+            }
+        }
+
+        console.log("Data 1:");
+        kiemTraThang(avgDolphins1, avgKoalas1);
+
+        console.log("\nData 2:");
+        kiemTraThang(avgDolphins2, avgKoalas2);
+    </script>
+</body>
+</html>

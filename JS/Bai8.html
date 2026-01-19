@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcTip(bill) {
+            return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+        }
+
+        var hoaDon = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+        var tips = [];
+        var Tong = [];
+
+        for (var i = 0; i < hoaDon.length; i++) {
+            var tip = calcTip(hoaDon[i]);
+            tips.push(tip);
+            Tong.push(hoaDon[i] + tip);
+        }
+
+        console.log("Hoa don:", hoaDon);
+        console.log("Tips:", tips);
+        console.log("Tong cong:", Tong);
+
+        for (var i = 0; i < hoaDon.length; i++) {
+            console.log(`Hoa don: ${hoaDon[i]}, Tip: ${tips[i].toFixed(2)}, Tong cong: ${Tong[i].toFixed(2)}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mark = {
+            fullName: "Mark Miller",
+            mass: 78,
+            height: 1.69,
+            calcBMI: function() {
+                this.bmi = this.mass / (this.height ** 2);
+                return this.bmi;
+            }
+        };
+
+        var john = {
+            fullName: "John Smith",
+            mass: 92,
+            height: 1.95,
+            calcBMI: function() {
+                this.bmi = this.mass / (this.height ** 2);
+                return this.bmi;
+            }
+        };
+
+        mark.calcBMI();
+        john.calcBMI();
+
+        console.log(`BMI cua Mark: ${mark.bmi.toFixed(1)}`);
+        console.log(`BMI cua John: ${john.bmi.toFixed(1)}`);
+
+        if (mark.bmi > john.bmi) {
+            console.log(`BMI cua ${mark.fullName} (${mark.bmi.toFixed(1)}) lon hon cua ${john.fullName} (${john.bmi.toFixed(1)})!`);
+        } else {
+            console.log(`BMI cua ${john.fullName} (${john.bmi.toFixed(1)}) lon hon cua ${mark.fullName} (${mark.bmi.toFixed(1)})!`);
+        }
+    </script>
+</body>
+</html>
