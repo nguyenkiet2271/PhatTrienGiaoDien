@@ -1,0 +1,19 @@
+.alert {
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+.success {
+  background-color: green;
+}
+
+.warning {
+  background-color: orange;
+}
+
+.error {
+  background-color: red;
+}
